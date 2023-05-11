@@ -1,0 +1,20 @@
+.text-colors{
+    color: #fff;
+}
+.navbar-nav{
+    padding-right: 5%;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+.text-colors li a:hover:after {
+
+    border-bottom: 4px #fff;
+    border-bottom-style: solid;
+    border-radius: 3px;
+}
+.navbar-nav :hover:after {
+    /* border-bottom: 4px solid #4cdb13; */
+    border-bottom: 4px #fffbfb;
+    border-bottom-style: solid;
+    border-radius: 3px;
+} 

@@ -1,0 +1,138 @@
+
+.aboutus {
+  /* background: linear-gradient(
+    100deg,
+    rgb(33, 68, 132) 40%,
+    rgba(0, 39, 70) 60%
+  ); */
+  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+  /* background: rgb(36,0,0);
+background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(9,9,121,1) 23%, rgba(122,39,9,1) 36%, rgba(21,123,9,1) 57%, rgba(226,0,255,1) 100%); */
+background: #FDF1E7;
+font-family: poppins;
+}
+
+.container1 {
+  /* margin-top: 15%; */
+  padding-top: 15%;
+}
+
+.img-text{
+  width: 100%;
+  height: 330px;
+  display: block;
+  text-align: center;
+  padding: 5px 5px;
+  padding-top: 42%;
+  background: #262626;
+  color: #fff;
+  border-radius: 27px;
+}
+
+.img-text h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.img-text p {
+  font-size: 16px;
+  font-family:'Times New Roman', Times, serif;
+}
+.img-texts{
+  width: 100%;
+  height: 330px;
+  display: block;
+  text-align: center;
+  padding: 5px 5px;
+  padding-top: 42%;
+  background: #262626;
+  color: #fff;
+  border-radius: 27px;
+}
+.single-box {
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color:#fff;
+
+}
+
+
+.img-area {
+  
+  transition: all .2s;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0.84, 1, 0.31);
+  transition-delay: 0s;
+  transition-property: all;
+  margin-bottom: 2rem;
+  position: absolute;
+  width: 140px;
+  height: 150px;
+  border: 5px solid #ffffff;
+  overflow: hidden;
+  top: 15px;
+  left: 150px;
+  border-radius: 50%;
+}
+
+.img-area img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -70px;
+}
+
+.carousel-indicators li {
+  background: #000;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.carousel-indicators .active {
+  background: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.myimgpic {
+  width: 150px;
+  height: 100px;
+}
+#id{
+  align-items: center;
+  justify-content: center;
+}
+.col-md-4{
+  align-items: center ;
+  justify-content: center ;
+  
+}
+.img-text2 {
+  width: 100%;
+  height: 300px;
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  padding-top: 45%;
+  background: #262626;
+  color: #fff;
+  border-radius: 15px;
+}
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+  --animate-delay: 1s;
+
+}
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 1s;
+  --animate-delay: .5s;
+}
