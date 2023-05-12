@@ -3,18 +3,72 @@ import "./LandingPage.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Slider from "react-slick";
+import SubHead from "../Atoms/subhead";
+import Paragraph from "../Atoms/paragraph";
+import FeatureItem from "./featureItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import carousel1 from "../images/carousel_1.jpg"
-import carousel2 from "../images/carousel_2.png"
-import carousel3 from "../images/carousel_3.png"
+// import carousel2 from "../images/carousel_2.png"
+// import carousel3 from "../images/carousel_3.png"
 // import carousel4 from "../images/carousel_4.png"
 // import carousel5 from "../images/carousel_5.png"
+import {motion} from "framer-motion";
+import logoa from "../images/a.jpg";
+import Testimonial from "../Testimonial/index";
 
 const redirectpage = () => {
   window.open("https://www.learnpick.in/prime/documents/ppts/details/676/world-hunger")
 };
 export const LandingPage = () => {
+  const dataFeatures = [
+    {
+      id: 1,
+      title: "One time payment",
+      logo: "/feature-1.svg",
+      content:
+        "Check out our best practices and support to quickly make text messaging one of your top 3 revenue channels.",
+    },
+    {
+      id: 2,
+      title: "Self-reported data",
+      logo: "/feature-2.svg",
+      content:
+        "You own your data, store design and business plan, but you are free to use the software platform and resources provided by Shopify.",
+    },
+    {
+      id: 3,
+      title: "Updates are always free",
+      logo: "/feature-3.svg",
+      content:
+        "Careandshare is so dedicated to keeping its software current that it wont charge any penny for register.",
+    },
+    {
+      id: 4,
+      title: "Mobile first design",
+      logo: "/feature-4.svg",
+      content:
+        "With our mobile app, you can allow your customers to check their order status, browse your store and create an account on the spot.",
+    },
+    {
+      id: 5,
+      title: "100% Customizable",
+      logo: "/feature-5.svg",
+      content:
+        "You can customize your storefront and everything else in the way you want as the owner of your source code.",
+    },
+    {
+      id: 6,
+      title: "Easy task management",
+      logo: "/feature-6.svg",
+      content:
+        "You can have peace of mind knowing that your system is running smoothly thanks to our techs' expertise and precision.",
+    },
+  ];
+  const content = {
+    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+    hidden: { y: -100, opacity: 0 },
+  };
   var settings = {
     dots: true,
     infinite: true,
@@ -139,96 +193,68 @@ export const LandingPage = () => {
                                 </div>}
               </TrackVisibility>
             </div>
-          </div><button className="button-62" onClick={redirectpage}></button>
+          </div>
         </div>
-        {/* <Slider className="slider"{...settings}>
-                                  <div className="slider_track">
-                                    <h1>1</h1>
-                                      <div className="slider_track_bar">
-                                        <img src={"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.learnpick.in%2Fuserfiles%2Fresources_conversion_files%2Fpresentation_world_hunger_(original)_1460538171_201563-7.jpg&tbnid=epEzPIm5TbyMqM&vet=12ahUKEwiDk8aH-M_-AhWNyHMBHZIYApsQMygCegUIARDEAQ..i&imgrefurl=https%3A%2F%2Fwww.learnpick.in%2Fprime%2Fdocuments%2Fppts%2Fdetails%2F676%2Fworld-hunger&docid=NgguApeplroYGM&w=3000&h=2250&q=WHAT%20CAUSES%20WORLD%20HUNGER%3F&ved=2ahUKEwiDk8aH-M_-AhWNyHMBHZIYApsQMygCegUIARDEAQ"}/>
-                                      </div>
-                                  </div>
-                                  <div className="slider_track">
-                                    <h1>2</h1>
-                                  </div>
-                                  <div className="slider_track">
-                                    <h1>lorem epsum
-                                    </h1>
-                                  </div>
-                                  <div className="slider_track">
-                                    <h1>4</h1>
-                                  </div>
-                                  <div className="slider_track">
-                                    <h1>5</h1>
-                                  </div>
-                                  <div className="slider_track">
-                                    <h1>6</h1>
-                                  </div>
-                                </Slider> */}
         </section>
-        <div
-      id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="false"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+        
+    <div className="container mx-auto max-w-[1344px]">
+      <div className="px-5 py-16 flex flex-col gap-10 sm:pb-28 sm:px-10 md:pb-36">
+        {/* Head Content */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={content}
+          className="text-center flex flex-col items-center"
+        >
+          <h2 className="subtitle-text2">360° CUSTOMIZABLE</h2>
+          <SubHead style="mb-[18px] sm:w-8/12 md:w-9/12 lg:w-7/12">
+            Have full control over your online store
+          </SubHead>
+          <Paragraph
+            fontSize="text-sm"
+            color="text-black-400"
+            style="sm:w-3/5 md:w-7/12 lg:w-1/3"
+          >
+            Take total control of your eCommerce business by owning the source
+            code and data that drive it.
+          </Paragraph>
+        </motion.div>
+
+        {/* Feature Items */}
+        <div className="grid-section">
+          {dataFeatures?.map((feature, index) => (
+            <FeatureItem key={feature.id} feature={feature} i={index} />
+          ))}
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src={carousel1} class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src={carousel2} class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src={carousel3} class="d-block w-100" alt="..." />
-        </div>
-        {/* <div class="carousel-item">
-          <img src={carousel4} class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src={carousel5} class="d-block w-100" alt="..." />
-        </div> */}
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true" style={{color:"black"}}></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>  
+    </div>
+    <div className="section21">
+    <TrackVisibility>
+              {({isVisible})=>
+                            <div className={isVisible ? "animate__animated animate__fadeInUp": ""}>
+                              
+                                <div className="container">
+                                  <div className="text-center">
+                                    <h4 className="subtitle-text">
+                                    {/* SHARING A MEAL IS ONE OF THE MOST BASIC HUMAN ACTS OF KINDNESS, AND DONATING FOOD IS AN EXTENSION OF THAT KINDNESS                                    </h4> */}
+                                    <b>SHARING</b> a meal is one of the most basic human acts of <b>KINDNESS</b>, and <b>DONATING</b> food is an <b>EXTENSION</b> of that kindness.</h4>
+                                    <img className="subtitle-img" src= {logoa} />
+                                  </div>
+                                </div>
+                              </div>}
+              </TrackVisibility>
+              
+              </div>
+              <div>
+              <TrackVisibility>
+              {({isVisible})=>
+                            <div className={isVisible ? "animate__animated animate__fadeInUp": ""}>
+                              <Testimonial/>
+                              </div>}
+              </TrackVisibility>
+              </div>
+              
     </div>
     </>
   );

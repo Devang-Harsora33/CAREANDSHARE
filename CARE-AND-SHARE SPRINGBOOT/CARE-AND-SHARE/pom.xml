@@ -9,11 +9,11 @@
 		<version>2.7.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.onlineshopping</groupId>
-	<artifactId>online-shopping</artifactId>
+	<groupId>com.careandshare</groupId>
+	<artifactId>care-and-share</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>online-shopping</name>
-	<description>online shopping project using  spring boot + react</description>
+	<name>care-and-share</name>
+	<description>care and share project using  spring boot + react</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
