@@ -122,9 +122,10 @@ const AddUserForm = () => {
               </div>
 
               <div class="mb-3 mt-1">
+                <b>
                 <label for="quantity" class="form-label">
                   Password
-                </label>
+                </label></b>
                 <input
                   type="password"
                   class="form-control"
