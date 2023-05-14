@@ -317,12 +317,20 @@
   color: #ffffffa1;
 }
 .subtitle-text2{
-  font-size: 30px;
+  font-size: 50px;
   font-family: 'Montserrat', sans-serif;
   justify-content: center;
   align-items: center;
   color: #000000a1;
   margin-top:10%;
+}
+.subtitle-text3{
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  align-items: center;
+  color: #000000a1;
+  margin-top:1%;
 }
 
 .section21{
@@ -344,4 +352,26 @@
 .subtitle-img{
   height:500px;
   width:600px;
+  margin-left: 5%;
+}
+.thanking{
+  font-size: 27px;
+  justify-items: center;
+  align-items: center;
+  padding-left: 20%;
+  margin-top: 20%
+}
+.thanking-a{
+  font-size: 15px;
+  justify-items: center;
+  align-items: center;
+  padding-left: 60%;
+  color: #980000;
+}
+.text-center{
+  display: grid;        
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2.1rem;
+  margin-top: 5%;
 }

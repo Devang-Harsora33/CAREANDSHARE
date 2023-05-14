@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 
 import { useRef } from "react";
 import TestimonialItem from "./testimonialItem";
+import TestimonialItem2 from "./testimonialItem2";
 // import IconButton from '@material-ui/core/IconButton';
 // import { ArrowLeft, ArrowRight } from '@material-ui/icons';
 
@@ -38,7 +39,7 @@ export default function Testimonial() {
               <TestimonialItem/>
             </SwiperSlide>
             <SwiperSlide>
-              <TestimonialItem/>
+              <TestimonialItem2/>
             </SwiperSlide>
             <div className="absolute bottom-0 right-0 sm:right-10 z-10 flex items-center gap-6">
               <button

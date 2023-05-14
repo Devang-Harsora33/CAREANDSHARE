@@ -1,11 +1,11 @@
 import SubHead from "../Atoms/subhead"
 import Paragraph from "../Atoms/paragraph"
 
-export default function TestimonialItem() {
+export default function TestimonialItem2() {
   return (
     <div className="flex flex-col gap-[50px] items-center md:flex-row md:items-end lg:gap-44 lg:items-center">
       <img
-        className="w-[1000px] md:w-8/12 lg:w-2/5"
+        className="w-[500px] md:w-8/12 lg:w-2/5"
         src="/donation2.jpg"
         alt="testimonial"
       />
@@ -14,7 +14,7 @@ export default function TestimonialItem() {
           What Our Customers Say
         </SubHead>
         <Paragraph style="mb-9">
-          “Be the reason someone smiles today. Donate food to those in need.”
+          “Donating food is a simple act of kindness that can make a big impact on someone's life.”
         </Paragraph>
         <div className="flex flex-col font-body">
           <h5 className="text-primary-100 mb-2.5 font-medium">RHA</h5>

@@ -2,18 +2,11 @@ import React from "react";
 import "./LandingPage.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import Slider from "react-slick";
-import SubHead from "../Atoms/subhead";
-import Paragraph from "../Atoms/paragraph";
+
 import FeatureItem from "./featureItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import carousel1 from "../images/carousel_1.jpg"
-// import carousel2 from "../images/carousel_2.png"
-// import carousel3 from "../images/carousel_3.png"
-// import carousel4 from "../images/carousel_4.png"
-// import carousel5 from "../images/carousel_5.png"
-import {motion} from "framer-motion";
+
 import logoa from "../images/a.jpg";
 import Testimonial from "../Testimonial/index";
 
@@ -24,45 +17,45 @@ export const LandingPage = () => {
   const dataFeatures = [
     {
       id: 1,
-      title: "One time payment",
+      title: "WHAT IS HUNGER?",
       logo: "/feature-1.svg",
       content:
-        "Check out our best practices and support to quickly make text messaging one of your top 3 revenue channels.",
+        "Hunger is more complicated than empty bellies. It’s a multifaceted problem with many root causes and far-reaching impact. The first step to ending the global hunger crisis is to understand what it is and why it exists in a world of plenty.",
     },
     {
       id: 2,
-      title: "Self-reported data",
+      title: "WHO DOES HUNGER AFFECT?",
       logo: "/feature-2.svg",
       content:
-        "You own your data, store design and business plan, but you are free to use the software platform and resources provided by Shopify.",
+        "An overwhelming majority of the world's hungry people reside in the developing world, where extreme poverty and lack of access to nutritious food often leads to malnutrition. Women and children are particularly vulnerable.",
     },
     {
       id: 3,
-      title: "Updates are always free",
+      title: "WHAT CAUSES WORLD HUNGER?",
       logo: "/feature-3.svg",
       content:
-        "Careandshare is so dedicated to keeping its software current that it wont charge any penny for register.",
+        "poverty, climate change, conflict and war, unequal distribution of resources, lack of infrastructure, food waste, limited access to education and healthcare.",
     },
     {
       id: 4,
-      title: "Mobile first design",
+      title: "THE BENEFITS OF FOOD DONATION:",
       logo: "/feature-4.svg",
       content:
-        "With our mobile app, you can allow your customers to check their order status, browse your store and create an account on the spot.",
+        "Food donation helps reduce food waste, provides access to food for those in need, and promotes sustainability, community building, improved health, and support for the local economy.",
     },
     {
       id: 5,
-      title: "100% Customizable",
+      title: "WAYS TO DONATE FOOD!",
       logo: "/feature-5.svg",
       content:
-        "You can customize your storefront and everything else in the way you want as the owner of your source code.",
+        "There are various ways to donate food, including through food banks, food drives, and online donations. Donors can also support local farmers and food producers, reduce food waste, and volunteer their time to help with food donation programs.And using our application CARE AND SHARE.",
     },
     {
       id: 6,
-      title: "Easy task management",
+      title: "CONTACT THE RHA-INDIA HQ:",
       logo: "/feature-6.svg",
       content:
-        "You can have peace of mind knowing that your system is running smoothly thanks to our techs' expertise and precision.",
+        "CONTACT NO.: 8971966164. CAN USE THIS FOR WHATSAPP TOO.",
     },
   ];
   const content = {
@@ -200,26 +193,20 @@ export const LandingPage = () => {
     <div className="container mx-auto max-w-[1344px]">
       <div className="px-5 py-16 flex flex-col gap-10 sm:pb-28 sm:px-10 md:pb-36">
         {/* Head Content */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={content}
-          className="text-center flex flex-col items-center"
-        >
-          <h2 className="subtitle-text2">360° CUSTOMIZABLE</h2>
-          <SubHead style="mb-[18px] sm:w-8/12 md:w-9/12 lg:w-7/12">
-            Have full control over your online store
-          </SubHead>
-          <Paragraph
-            fontSize="text-sm"
-            color="text-black-400"
-            style="sm:w-3/5 md:w-7/12 lg:w-1/3"
-          >
-            Take total control of your eCommerce business by owning the source
-            code and data that drive it.
-          </Paragraph>
-        </motion.div>
+        <TrackVisibility>
+              {({isVisible})=>
+                            <div className={isVisible ? "animate__animated animate__fadeInUp": ""}>
+                              <b><p className="subtitle-text2">GLOBAL HUNGER CRISIS IN 2023</p></b>
+          <p className="subtitle-text3">
+          After steadily declining for a decade, world hunger is on the rise, affecting nearly 10% of people globally. 
+          From 2019 to 2022, the number of undernourished people grew by as many as 150 million, a crisis driven largely by conflict,
+          climate change, and the COVID-19 pandemic.
+          </p>
+          <b><p style={{fontSize:"20px"}}>More Information</p></b>
+                              </div>}
+              </TrackVisibility>
+          
+        
 
         {/* Feature Items */}
         <div className="grid-section">
@@ -234,9 +221,10 @@ export const LandingPage = () => {
               {({isVisible})=>
                             <div className={isVisible ? "animate__animated animate__fadeInUp": ""}>
                               
-                                <div className="container">
+                                <div className="container3">
                                   <div className="text-center">
                                     <h4 className="subtitle-text">
+                                      <br></br><br></br><br></br><br></br><br></br><br></br>
                                     {/* SHARING A MEAL IS ONE OF THE MOST BASIC HUMAN ACTS OF KINDNESS, AND DONATING FOOD IS AN EXTENSION OF THAT KINDNESS                                    </h4> */}
                                     <b>SHARING</b> a meal is one of the most basic human acts of <b>KINDNESS</b>, and <b>DONATING</b> food is an <b>EXTENSION</b> of that kindness.</h4>
                                     <img className="subtitle-img" src= {logoa} />
@@ -254,7 +242,8 @@ export const LandingPage = () => {
                               </div>}
               </TrackVisibility>
               </div>
-              
+              <h4 className="thanking">THANKING YOU RHA_INDIA FOR VERIFYING AND APPROVING OUR PROJECT.</h4>
+              <a href="https://robinhoodarmy.com/" className="thanking-a"target="_blank">Contact RHA INDIA from here.</a>
     </div>
     </>
   );
